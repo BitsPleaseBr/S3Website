@@ -1,3 +1,4 @@
+<%@page import="s3.api.access.MethodCallerFactory"%>
 <script src="../assets/js/core/jquery.min.js"></script>
 <script src="../assets/js/plugins/jquery.cookie.js"></script>
 
@@ -11,6 +12,10 @@ if(request == "400"){
 	
 }else{
 
+	document.location.href = "cookies.jsp?id=" + request[0];
+	
+	var dados = "<% out.print(MethodCallerFactory.selecionarDadosUsuario(Integer.parseInt(request.getParameter("id"))).call().getResponse().getBody()); %>";
+	
 	$.cookie("id", request[0], { expires: 7, path: '/' });
 	$.cookie("token", request[1], { expires: 7, path: '/' });
 	$.cookie("tipo", request[2], { expires: 7, path: '/' });

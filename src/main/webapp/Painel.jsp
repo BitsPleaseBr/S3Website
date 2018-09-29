@@ -1,4 +1,4 @@
-<%@include file = "../includes/topo.jsp" %>
+<%@include file = "includes/topo.jsp" %>
 
   <title>
     Painel
@@ -6,7 +6,7 @@
 </head>
   
 <body>
-	<%@include file = "../includes/sidebarup.jsp" %> 
+	<%@include file = "includes/sidebarup.jsp" %> 
 	
         <ul class="nav nav-down">
 		
@@ -16,15 +16,15 @@
 
     <div class="main-panel">
     
-	  <%@include file="../includes/usernavbar.jsp" %>
+	  <%@include file="includes/usernavbar.jsp" %>
 
         <div class="content">
 
         </div>
         
-    <%@include file="../includes/footer.jsp" %>
+    <%@include file="includes/footer.jsp" %>
   	
-  <%@include file="../includes/baselogado.jsp" %>
+  <%@include file="includes/baselogado.jsp" %>
 
   <script>
   var tipo = $.cookie("tipo");
