@@ -16,10 +16,12 @@
   <script src="assets/js/plugins/jquery.validate-additional-methods.min.js"></script>
   <!--  Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
   <script src="assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-  <!-- Plugin for DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
-  <script src="assets/js/plugins/bootstrap-datetimepicker.js"></script>
-  <!--  Plugin for Sweet Alert -->
-  <script src="assets/js/plugins/sweetalert2.min.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!--  Plugin for Sweet Alert 2-->
+  <script src="assets/js/plugins/sweetalert2.all.min.js"></script>
   <!--  DataTables.net Plugin, full documentation here: https://datatables.net/    -->
   <script src="assets/js/plugins/jquery.dataTables.min.js"></script>
   <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
@@ -35,21 +37,6 @@
   <!-- Aplicações dos Plugins -->
   <script src="assets/js/S3.js"></script>
   <script>  
-	function load(element, page) {
-
-		$('.active').removeClass('active');
-			
-		$(element).parents('li').addClass('active');
-		
-		$('.content').load(page);
-		
-		$('.sidebar .sidebar-wrapper, .main-panel').scrollTop(0);
-
-	    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('update');
-	}
-	  	
-  	$('content').css('z-index','7');
-  
     $(document).ready(function() {
   	  $page = $('.full-page');
 	  image_src = $page.data('image');
@@ -83,7 +70,7 @@
   width: 6rem;
   margin: auto;
   top: 42rem;
-  left: 90rem;
+  left: 91rem;
   right: 0;
   bottom: 0;
 }

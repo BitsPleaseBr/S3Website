@@ -6,7 +6,7 @@
 </head>
   
 <body>
-	<%@include file = "includes/sidebarup.jsp" %> 
+	<%@include file = "includes/user/sidebarup.jsp" %> 
 	
         <ul class="nav nav-down">
 		
@@ -16,7 +16,7 @@
 
     <div class="main-panel">
     
-	  <%@include file="includes/usernavbar.jsp" %>
+	  <%@include file="includes/user/navbar.jsp" %>
 
         <div class="content">
 
@@ -24,7 +24,7 @@
         
     <%@include file="includes/footer.jsp" %>
   	
-  <%@include file="includes/baselogado.jsp" %>
+  <%@include file="includes/user/base.jsp" %>
 
   <script>
   var tipo = $.cookie("tipo");

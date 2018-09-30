@@ -37,29 +37,14 @@
   <!-- Aplicações dos Plugins -->
   <script src="assets/js/S3.js"></script>
   <script>  
-	function load(element, page) {
-
-		$('.active').removeClass('active');
-			
-		$(element).parents('li').addClass('active');
-		
-		$('.content').load(page);
-		
-		$('.sidebar .sidebar-wrapper, .main-panel').scrollTop(0);
-
-	    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('update');
-	}
-	  	
-  	$('content').css('z-index','7');
-  
     $(document).ready(function() {
-  	  $page = $('.full-page');
-	  image_src = $page.data('image');
-
-	  if (image_src !== undefined) {
-	    image_container = '<div class="full-page-background" style="background-image: url(' + image_src + ') "/>';
-	    $page.append(image_container);
-	  }
+		$page = $('.full-page');
+		image_src = $page.data('image');
+		
+		if (image_src !== undefined) {
+			image_container = '<div class="full-page-background" style="background-image: url(' + image_src + ') "/>';
+			$page.append(image_container);
+		}
     });
   </script>
 </body>

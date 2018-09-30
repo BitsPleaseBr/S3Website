@@ -12,150 +12,6 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
-.pace {
-  width: 140px;
-  height: 300px;
-  position: fixed;
-  bottom: -90px;
-  left: -20px;
-  z-index: 2000;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  opacity: 0;
-  transition: all 1s linear 0s; }
-
-.pace.pace-active {
-  -webkit-transform: scale(0.25);
-  transform: scale(0.25);
-  opacity: 1; }
-
-.pace .pace-activity {
-  width: 140px;
-  height: 140px;
-  border-radius: 70px;
-  background: #50c878;
-  position: absolute;
-  top: 0;
-  z-index: 1911;
-  -webkit-animation: pace-bounce 1s infinite;
-  animation: pace-bounce 1s infinite; }
-
-.pace .pace-progress {
-  position: absolute;
-  display: block;
-  left: 50%;
-  bottom: 0;
-  z-index: 1910;
-  margin-left: -30px;
-  width: 60px;
-  height: 75px;
-  background: rgba(20, 20, 20, 0.1);
-  box-shadow: 0 0 20px 35px rgba(20, 20, 20, 0.1);
-  border-radius: 30px / 40px;
-  -webkit-transform: scaleY(0.3) !important;
-  transform: scaleY(0.3) !important;
-  -webkit-animation: pace-compress .5s infinite alternate;
-  animation: pace-compress .5s infinite alternate; }
-
-@-webkit-keyframes pace-bounce {
-  0% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in; }
-  40% { }
-  50% {
-    top: 140px;
-    height: 140px;
-    -webkit-animation-timing-function: ease-out; }
-  55% {
-    top: 160px;
-    height: 120px;
-    border-radius: 70px / 60px;
-    -webkit-animation-timing-function: ease-in; }
-  65% {
-    top: 120px;
-    height: 140px;
-    border-radius: 70px;
-    -webkit-animation-timing-function: ease-out; }
-  95% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in; }
-  100% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in; } }
-
-@keyframes pace-bounce {
-  0% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-  50% {
-    top: 140px;
-    height: 140px;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; }
-  55% {
-    top: 160px;
-    height: 120px;
-    border-radius: 70px / 60px;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-  65% {
-    top: 120px;
-    height: 140px;
-    border-radius: 70px;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; }
-  95% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-  100% {
-    top: 0;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; } }
-
-@-webkit-keyframes pace-compress {
-  0% {
-    bottom: 0;
-    margin-left: -30px;
-    width: 60px;
-    height: 75px;
-    background: rgba(20, 20, 20, 0.1);
-    box-shadow: 0 0 20px 35px rgba(20, 20, 20, 0.1);
-    border-radius: 30px / 40px;
-    -webkit-animation-timing-function: ease-in; }
-  100% {
-    bottom: 30px;
-    margin-left: -10px;
-    width: 20px;
-    height: 5px;
-    background: rgba(20, 20, 20, 0.3);
-    box-shadow: 0 0 20px 35px rgba(20, 20, 20, 0.3);
-    border-radius: 20px / 20px;
-    -webkit-animation-timing-function: ease-out; } }
-
-@keyframes pace-compress {
-  0% {
-    bottom: 0;
-    margin-left: -30px;
-    width: 60px;
-    height: 75px;
-    background: rgba(20, 20, 20, 0.1);
-    box-shadow: 0 0 20px 35px rgba(20, 20, 20, 0.1);
-    border-radius: 30px / 40px;
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in; }
-  100% {
-    bottom: 30px;
-    margin-left: -10px;
-    width: 20px;
-    height: 5px;
-    background: rgba(20, 20, 20, 0.3);
-    box-shadow: 0 0 20px 35px rgba(20, 20, 20, 0.3);
-    border-radius: 20px / 20px;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out; } }
-
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -4510,6 +4366,20 @@ be a descendant of the grid when it is being dragged.
 .card-calendar .fc .fc-body .fc-widget-content {
   border-bottom: 0; }
 
+@font-face {
+  font-family: 'bariolregular';
+  src: url("../fonts/bariol/bariol_regular.eot");
+  src: url("../fonts/bariol/bariol_regular.eot") format("embedded-opentype"), url("../fonts/bariol/bariol_regular.woff2") format("woff2"), url("../fonts/bariol/bariol_regular.woff") format("woff"), url("../fonts/bariol/bariol_regular.ttf") format("truetype"), url("../fonts/bariol/bariol_regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'archiaregular';
+  src: url("../fonts/archia/archia-regular.eot");
+  src: url("../fonts/archia/archia-regular.eot") format("embedded-opentype"), url("../fonts/archia/archia-regular.woff2") format("woff2"), url("../fonts/archia/archia-regular.woff") format("woff"), url("../fonts/archia/archia-regular.ttf") format("truetype"), url("../fonts/archia/archia-regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--------------------------------
 
 nucleo-icons Web Font - built using nucleoapp.com
@@ -8067,20 +7937,6 @@ img {
 .fixed-plugin .show-dropdown.show .dropdown-menu.show[x-placement=top-start] {
   -webkit-transform: translate3d(0, 470px, 0) !important;
   transform: translate3d(0, 470px, 0) !important; }
-
-@font-face {
-  font-family: 'bariolregular';
-  src: url("../fonts/bariol/bariol_regular.eot");
-  src: url("../fonts/bariol/bariol_regular.eot") format("embedded-opentype"), url("../fonts/bariol/bariol_regular.woff2") format("woff2"), url("../fonts/bariol/bariol_regular.woff") format("woff"), url("../fonts/bariol/bariol_regular.ttf") format("truetype"), url("../fonts/bariol/bariol_regular.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'archiaregular';
-  src: url("../fonts/archia/archia-regular.eot");
-  src: url("../fonts/archia/archia-regular.eot") format("embedded-opentype"), url("../fonts/archia/archia-regular.woff2") format("woff2"), url("../fonts/archia/archia-regular.woff") format("woff"), url("../fonts/archia/archia-regular.ttf") format("truetype"), url("../fonts/archia/archia-regular.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 
 .from-check,
 .form-check-radio {
