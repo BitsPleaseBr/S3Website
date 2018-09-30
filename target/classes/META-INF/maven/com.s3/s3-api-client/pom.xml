@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.s3</groupId>
-	<artifactId>s3-website</artifactId>
+	<artifactId>s3-api-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>s3-website</name>
+	<name>s3-api-client</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -78,12 +78,6 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.6</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>4.4.1</version>
-		</dependency>
 
 		<dependency>
 			<groupId>com.s3</groupId>
@@ -94,11 +88,11 @@
 			<type>jar</type>
 			<optional>true</optional>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>com.s3</groupId>
-			<artifactId>s3-api-access</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
+			<artifactId>s3-api-acess</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/S3APIAccess.jar</systemPath>
 			<type>jar</type>
