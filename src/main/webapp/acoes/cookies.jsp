@@ -12,14 +12,12 @@ if(request == "400"){
 	
 }else{
 	
-	var dados = "<% int id = Integer.parseInt(request.getParameter("t").split(":")[0]);	    
-	    			out.print(MethodCallerFactory.selecionarDadosUsuario(id).call().getResponse().getBody()); %>";
+	var dados = <% int id = Integer.parseInt(request.getParameter("t").split(":")[0]);	    
+	    		   out.print(MethodCallerFactory.selecionarDadosUsuario(id).call().getResponse().getBody().replaceAll("\"", "\\\"")); %>["infos"];
 	
 	$.cookie("id", request[0], { expires: 7, path: '/' });
 	$.cookie("token", request[1], { expires: 7, path: '/' });
 	$.cookie("tipo", request[2], { expires: 7, path: '/' });
-	
-	alert(dados);
 	
 	//window.location.href = "../Painel.jsp";
 
