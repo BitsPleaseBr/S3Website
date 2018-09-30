@@ -7,7 +7,7 @@
 	try{
 		String token = (MethodCallerFactory.gerarToken(email, senha).call().getHashBody().get("token")).toString();
 		
-		response.sendRedirect("cookies.jsp?" + token);
+		response.sendRedirect("cookies.jsp?t=" + token);
 		
 		MethodCallerFactory.setToken(token);
 		

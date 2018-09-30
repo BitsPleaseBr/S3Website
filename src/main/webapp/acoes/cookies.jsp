@@ -4,23 +4,24 @@
 
 <script>
 
-var request = window.location.search.replace("?","").split(":");
+var request = window.location.search.replace("?t=","").split(":");
 
 if(request == "400"){
 	
 	window.location.href = "../login.jsp?400";
 	
 }else{
-
-	document.location.href = "cookies.jsp?id=" + request[0];
 	
-	var dados = "<% out.print(MethodCallerFactory.selecionarDadosUsuario(Integer.parseInt(request.getParameter("id"))).call().getResponse().getBody()); %>";
+	var dados = "<% int id = Integer.parseInt(request.getParameter("t").split(":")[0]);	    
+	    			out.print(MethodCallerFactory.selecionarDadosUsuario(id).call().getResponse().getBody()); %>";
 	
 	$.cookie("id", request[0], { expires: 7, path: '/' });
 	$.cookie("token", request[1], { expires: 7, path: '/' });
 	$.cookie("tipo", request[2], { expires: 7, path: '/' });
 	
-	window.location.href = "../Painel.jsp";
+	alert(dados);
+	
+	//window.location.href = "../Painel.jsp";
 
 /*
 var situacao = "";
