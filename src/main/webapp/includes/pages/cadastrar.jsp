@@ -44,13 +44,13 @@
             
             <!-- Card do Form de Registrar -->
             <div class="col-lg-4 col-md-6 mr-auto">
-              <div class="card card-signup text-center">
-                <div class="card-header ">
-                  <h4 class="card-title">Cadastre-se</h4>
-                </div>
-				<small class="text-right" style="margin-right: 5%"><a href="cadastrarprofissional.jsp">Você um Médico? Chega mais</a></small>
-                <div class="card-body ">
-                  <form class="formCadastroPaciente" method="post" action="acoes/cadastrarPaciente.jsp">
+			  <form class="formCadastroPaciente" method="post" action="acoes/cadastrarPaciente.jsp">
+				<div class="card card-signup text-center">
+				  <div class="card-header ">
+				  	<h4 class="card-title">Cadastre-se</h4>
+                  </div>
+				  <small class="text-right" style="margin-right: 5%"><a href="cadastrarprofissional.jsp">Você um Médico? Chega mais</a></small>
+				  <div class="card-body ">
                     <div class="input-group">
                     
                       <div class="input-group-prepend">
@@ -105,18 +105,21 @@
                       </div>
                       <input type="password" name="senha" id="senhaPac" class="form-control" placeholder="Senha...">
                     </div>
-                  </form>
-                </div>
-				<small class="text-left" style="margin-left: 5%"><a href="#confirmação" data-toggle="modal" data-target="#EsqueciModal">Esqueceu sua senha?</a></small>
-                <div class="card-footer">
-                  <button type="button" class="btn btn-primary btn-round" id="btn_cadastrar">Confirmar Dados</button>
-                </div>
-              </div>
+
+                  </div>
+				  <small class="text-left" style="margin-left: 5%"><a href="#confirmação" data-toggle="modal" data-target="#EsqueciModal">Esqueceu sua senha?</a></small>
+                  <div class="card-footer">
+					<button type="button" class="btn btn-primary btn-round" id="btn_cadastrar">Confirmar Dados</button>
+                  </div>
+				</div>
+			  </form>
             </div>
           </div>
         </div>
         
         <script>
+        autofocus();
+        
     	$('.cpf').mask('000.000.000-00');
     	$('.data').mask('00/00/0000');
     	

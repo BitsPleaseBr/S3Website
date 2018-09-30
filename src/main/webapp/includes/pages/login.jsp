@@ -39,6 +39,8 @@
         </div>
 
 		<script>
+		autofocus();
+		
 		//Regras de validação do form de Login
 		var formLog = $('.formLogin');
 		formLog.validate({

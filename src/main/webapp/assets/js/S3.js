@@ -457,7 +457,7 @@
 			    });
 			  },
 			  
-			  showSwal: function(type) {
+			  showSwal: function(type) {				  
 				    const httpsresponse = swal.mixin({
 				    	buttonsStyling: false, 
 						confirmButtonClass: "btn btn-success",
@@ -465,7 +465,15 @@
 				    	allowEscapeKey: false
 				    })
 				  	
-				  	if (type == 'unauthorized') {
+				    if(type == 'logininvalid'){
+				    	swal({ 
+				    		title:"Não foi dessa vez!",
+				    		text: "Parece que o e-mail ou a senha digitados não correspondem, pode tentar novamente por favor? x3",
+				    		type: "warning",
+				    		buttonsStyling: false,
+				    		confirmButtonClass: "btn btn-success"
+				    	})
+			  		}else if(type == 'unauthorized') {
 				  		httpsresponse({
 						  title:"Sem permissão!!", 
 						  text: "Parece que você não está logado, é rapidinho, vamos lá!", 
@@ -499,7 +507,7 @@
 					    });;
 				    }else if(type == 'confirm500'){
 				    	httpsresponse({ 
-							title:"Mas poxa vida!", 
+				    		title:"Mas poxa vida!", 
 							text: "Alguma coisa deu errado no lado de cá do negócio, a gente vai ter de ver isso. Aguarde que em breve entraremos em contato =(", 
 							type: "error", 
 						}).then(function(isConfirm){
@@ -508,7 +516,7 @@
 				    	
 				    }else if(type == 'readterms'){
 					  	  swal({
-							  title:"Por favor leia os termos!", 
+					  		  title:"Por favor leia os termos!", 
 							  text: "Precisamos saber se você leu nossos termos de uso", 
 							  type: "info", 
 							  buttonsStyling: false, 
@@ -547,14 +555,38 @@
 				  }
 			  }
     }
+      
+  	//Função para alterar qual conteudo vai ser mostrado
+	function load(element, page) {
+
+		$('.active').removeClass('active');
+			
+		$(element).parents('li').addClass('active');
+		
+		$('.content').load(page);
+		
+		$('.sidebar .sidebar-wrapper, .main-panel').scrollTop(0);
+
+	    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('update');
+	}
+	
+	//Função para focar no input e habilitar apertar enter para dar submit
+	function autofocus(){
+		$('form input:first').focus();
+		  
+		$('input').keypress(function(event){
+			if(event.which == 13){
+				$('form button').click();
+			}
+		});
+	}
 	
    $(document).ready(function() {
 		
 	 //Referente aos plugins
 	 	
-	 	//Moment - Tempo
-	 	moment.locale('pt-br');
-	 	
+ 	//Moment - Tempo
+ 	moment.locale('pt-br');
    
 	//Metódo de senha
 	$.validator.addMethod("pass", function(value) {

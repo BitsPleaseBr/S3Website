@@ -16,7 +16,7 @@ $(document).ready(function() {
 	var tipo = $.cookie("tipo");
 	
 	if((tipo == 1) || (tipo == 2)){
-		location.href="Painel.jsp"
+		location.href="painel.jsp"
 	}else if(tipo == 3){
 		location.href="admin.eus2saude.com.br"
 	}else{

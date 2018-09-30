@@ -3,7 +3,7 @@
   <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
     <div class="container">
       <div class="navbar-wrapper">
-        <a class="navbar-brand" href="#"><img width=90% src="assets/img/brand.png"></a>
+        <a class="navbar-brand" href="index.jsp"><img width=90% src="assets/img/brand.png"></a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -13,7 +13,7 @@
 	  <div class="collapse navbar-collapse justify-content-end" id="navigation">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="index.jsp" class="nav-link">
               <i class="nc-icon nc-globe"></i> Home
             </a>
           </li>

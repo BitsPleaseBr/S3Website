@@ -443,9 +443,11 @@
           </div>
           
         </div>
-	<script src="assets/js/plugins/bootstrap-selectpicker.js"></script>
-	<script src="assets/js/plugins/bootstrap-tagsinput.js"></script>
+		<script src="assets/js/plugins/bootstrap-selectpicker.js"></script>
+		<script src="assets/js/plugins/bootstrap-tagsinput.js"></script>
         <script>
+        autofocus();
+        
     	$('.cpf').mask('000.000.000-00');
     	$('.data').mask('00/00/0000');
     	$('.celular').mask('(00) 00000-0000');

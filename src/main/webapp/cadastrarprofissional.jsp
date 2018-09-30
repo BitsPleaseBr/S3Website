@@ -20,7 +20,7 @@
 	
 	</div>
 	
-    <%@include file="includes/esqueci.jsp" %>
+    <%@include file="includes/lead/esqueci.jsp" %>
       
   <%@include file="includes/footer.jsp" %>
   
