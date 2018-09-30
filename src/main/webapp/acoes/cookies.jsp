@@ -18,6 +18,8 @@ if(request == "400"){
 	$.cookie("id", request[0], { expires: 7, path: '/' });
 	$.cookie("token", request[1], { expires: 7, path: '/' });
 	$.cookie("tipo", request[2], { expires: 7, path: '/' });
+	$.cookie("nome", dados["Nome"]);
+	$.cookie("email", dados["Email"]);
 	
 	//window.location.href = "../Painel.jsp";
 

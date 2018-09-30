@@ -74,7 +74,17 @@
 		
 		$("#btn_login").click(function() {
 			if(formLog.valid()){
-				$(".formLogin").submit();
+				$.ajax({   
+					   type: 'POST',   
+					   url: 'acoes/login.jsp',   
+					   data: formLog.serialize(),
+					   success: function(){
+							S3.showSwal("sendedemail");
+					   },
+					   error: function(){
+							S3.showToast("errorsubmit");
+					   }
+				});
 			}
 		});
 		</script>

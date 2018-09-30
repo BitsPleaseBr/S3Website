@@ -4,7 +4,7 @@
 		    // Code for the Validator
 		    var $validator = $('.card-wizard form').validate({
 		    	rules: {
-	  			  nome: {
+	  			  /*nome: {
 	  				  required: true,
 	  				  letterswithbasicpunc: true
 	  			  },
@@ -100,7 +100,7 @@
 	  				  required: true,
 	  				  pass: true,
 	  				  equalTo: '#senha'
-	  			  }
+	  			  }*/
 	  		  },
 	  		  messages: {
 	  			  nome: {
@@ -526,7 +526,7 @@
 					  	  swal({
 							  title:"Da uma olhada no seu e-mail!", 
 							  text: "Enviamos um e-mail de boas vindas com o link de confirmação para você! ;)", 
-							  type: "succes", 
+							  type: "success", 
 							  buttonsStyling: false, 
 							  confirmButtonClass: "btn btn-success"
 						  });
@@ -552,6 +552,13 @@
 			    		  type: 'error',
 			    		  position: 'center',
 			    		});
+				  }else if(type ==  'errorsubmit'){
+					  	toast({
+				    		  title: 'Deu algum problema aqui em pegar seus dados, tente novamente por favor',
+				    		  type: 'error',
+				    		  position: 'top-end',
+				    		  timer: 3000
+				    		});
 				  }
 			  }
     }
