@@ -78,11 +78,15 @@
 					   type: 'POST',   
 					   url: 'acoes/login.jsp',   
 					   data: formLog.serialize(),
-					   success: function(){
-							S3.showSwal("sendedemail");
+					   success: function(data){
+							if(data.trim() == ''){
+								S3.showSwal("logininvalid");
+							}else{
+								formLog.submit();
+							};
 					   },
 					   error: function(){
-							S3.showToast("errorsubmit");
+							S3.showToast('errorsubmit');
 					   }
 				});
 			}
