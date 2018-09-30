@@ -1,9 +1,18 @@
+<%@page import="ca.ryangreen.apigateway.generic.GenericApiGatewayException"%>
 <%@page import="s3.api.access.MethodCallerFactory"%>
 
 <%
 	String token = request.getParameter("token");
 
-	int status = MethodCallerFactory.confirmarEmail(token).call().getResponse().getHttpResponse().getStatusCode();
+	int status = 403;
+	
+	try {
+	  
+	  MethodCallerFactory.confirmarEmail(token).call().getResponse().getHttpResponse().getStatusCode();
+	} catch (GenericApiGatewayException e) {
+	  
+	  status = e.getStatusCode();
+	}
 	
 	switch (status) {
 		
