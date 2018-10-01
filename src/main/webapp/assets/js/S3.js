@@ -613,10 +613,9 @@
     	
     	if (ajaxEmailValido) {
     		ajaxEmailValido = false;
-		return emailValido == "true";
+    		return emailValido == "true";
     	}
     	
-    	var resultado = false;
     	var dados = "&email=" + value;
     	
     	$.ajax({
@@ -631,7 +630,7 @@
     		}
     	});
     	
-    	return resultado;
+    	return true;
     });
     
     var cpfValido = "";
@@ -645,7 +644,6 @@
     		return cpfValido == "true";
     	}
     
-    	var resultado = true;
     	var dados = "&cpf=" + value;
     	
     	$.ajax({
@@ -660,7 +658,7 @@
     		}
     	});
     	
-    	return resultado;
+    	return true;
     });
 
 });
