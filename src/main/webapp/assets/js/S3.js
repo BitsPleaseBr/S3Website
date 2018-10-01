@@ -606,13 +606,13 @@
 	}, "Digite um telefone válido");
    
    var emailValido = "";
-   var ajaxEmailValido = false;
+   var ajaxEmailUsado = false;
    
 	//Metódo para verificar se o Email já existe no banco
     $.validator.addMethod("emailBanco", function(value, element) {
     	
-    	if (ajaxEmailValido) {
-    		ajaxEmailValido = false;
+    	if (ajaxEmailUsado) {
+    		ajaxEmailUsado = false;
     		return emailValido == "true";
     	}
     	
