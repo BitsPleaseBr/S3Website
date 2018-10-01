@@ -50,4 +50,4 @@
         
 		<script src="assets/js/core/jquery.min.js"></script>
 		<script src="assets/js/plugins/jquery.cookie.js"></script>
-        <script>$('.name').text($.cookie("nome"));</script>
+    <script>$('.name').text($.cookie("nome"));</script>
